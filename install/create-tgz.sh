@@ -20,4 +20,5 @@ rm -rf .git .gitignore
 cd ..
 COPYFILE_DISABLE=1 tar czfv 2-ag-accesspolicies-0.0.1.tgz 2-ag-accesspolicies/
 
+mv *.tgz ../tgz
 echo 'tar process completed .............................'
