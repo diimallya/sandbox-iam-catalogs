@@ -1,0 +1,1 @@
+This tile in the catalog would create Access Group, Access policies and assign users to access groups for the sandboxes.
