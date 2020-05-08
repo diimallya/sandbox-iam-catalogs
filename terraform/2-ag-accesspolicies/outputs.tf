@@ -1,9 +1,9 @@
 output "accessGroup1"{
-	value = [ "$(ibm_iam_access_group.res_ag_1)" ]
+	value = [ "$(ibm_iam_access_group.res_ag_admin)" ]
 }
 
 output "accessGroup2"{
-	value = [ "$(ibm_iam_access_group.res_ag_2)" ]
+	value = [ "$(ibm_iam_access_group.res_ag_users)" ]
 }
 
 output "accessGroup3"{

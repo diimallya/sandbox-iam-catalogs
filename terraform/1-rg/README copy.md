@@ -1,1 +1,0 @@
-# sandbox-iam-catalogs
