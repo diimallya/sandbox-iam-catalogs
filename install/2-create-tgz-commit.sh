@@ -8,5 +8,6 @@ cd ..
 git add .
 git commit -m "Script Updated"
 git push
+git tag
 
 echo 'tar and commit process completed .............................'
