@@ -1,5 +1,5 @@
 resource "ibm_iam_access_group" "res_ag_3" {
-    name  = "APPDEV-ENVIRONMENT-ADMINS"
+  name  = "${var.ag3}"
 }
 
 resource "ibm_iam_access_group_policy" "res_ag3_policy3" {

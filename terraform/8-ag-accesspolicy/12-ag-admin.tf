@@ -1,5 +1,5 @@
 resource "ibm_iam_access_group" "res_ag_2" {
-    name  = "DATA-ADMINS"
+    name  = "${var.ag2}"
 }
 
 resource "ibm_iam_access_group_policy" "res_ag2_policy3" {
