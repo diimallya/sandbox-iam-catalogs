@@ -1,12 +1,3 @@
-variable admin_id{
-	type = "string"
-}
-
-variable developer_id{
-	type = "string"
-}
-
-
 variable admin_access_groups{
 	type = "list"
 	default = ["CLOUDMANAGEMENT-ADMINS", "DATA-ADMINS", "APPDEV-ENVIRONMENT-ADMINS", "APPDEV-ADMINS", "INTEGRATION-ADMINS", "BUSINESS-AUTOMATION-ADMINS" ]

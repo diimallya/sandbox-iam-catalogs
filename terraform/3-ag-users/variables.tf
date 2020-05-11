@@ -1,0 +1,49 @@
+variable admin_access_groups{
+	type = "list"
+	default = ["CLOUDMANAGEMENT-ADMINS", "DATA-ADMINS", "APPDEV-ENVIRONMENT-ADMINS", "APPDEV-ADMINS", "INTEGRATION-ADMINS", "BUSINESS-AUTOMATION-ADMINS" ]
+}
+
+variable user_access_groups{
+	type = "list"
+	default = ["APPDEV-USERS"]
+}
+
+variable admin_id_1{
+    type = "string"
+}
+
+variable admin_id_2{
+    type = "string"
+}
+
+variable admin_id_3{
+    type = "string"
+}
+
+variable admin_id_4{
+    type = "string"
+}
+
+variable admin_id_5{
+    type = "string"
+}
+
+variable user_id_1{
+    type = "string"
+}
+
+variable user_id_2{
+    type = "string"
+}
+
+variable user_id_3{
+    type = "string"
+}
+
+variable user_id_4{
+    type = "string"
+}
+
+variable user_id_5{
+    type = "string"
+}

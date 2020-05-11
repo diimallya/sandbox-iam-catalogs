@@ -1,1 +1,1 @@
-This tile in the catalog would create Resource Group for the sandboxes.
+This tile in the catalog would create Resource Groups for the sandboxes.

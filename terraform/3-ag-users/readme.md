@@ -1,0 +1,1 @@
+This tile in the catalog would assign users to the access groups for the sandboxes.
