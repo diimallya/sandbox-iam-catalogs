@@ -6,3 +6,7 @@ variable user_access_groups{
 variable test{
     default = "Dallas"
 }
+
+variable admin_id{
+    default = "dimallya@in.ibm.com"
+}
