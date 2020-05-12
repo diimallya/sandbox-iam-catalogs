@@ -1,8 +1,7 @@
 variable user_access_groups{
-	default = ["APPDEV-USERS1", "APPDEV-USERS2"]
+	default = ["APPDEV-USERS"]
 }
 
-variable admin_id{
-	type = "string"
-    default = "dimallya@in.ibm.com"
+variable admin_ids{
+    default = "dimallya@in.ibm.com,JeyaGandhi@in.ibm.com"
 }
