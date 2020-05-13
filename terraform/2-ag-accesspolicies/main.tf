@@ -83,6 +83,7 @@ data "ibm_resource_group" "data_rg_users" {
   name =  "${local.user_resource_groups[count.index]}"
 }
 
+
 /*** Users Access Groups Policies ***/
 
 resource "ibm_iam_access_group_policy" "res_policy_users_1" {

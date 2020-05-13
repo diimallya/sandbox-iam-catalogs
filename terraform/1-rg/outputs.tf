@@ -1,4 +1,4 @@
-output "resourceGroup1"{
-	value = "$(ibm_resource_group.res_rg)" 
+output "resourceGroups"{
+	value = ["$(ibm_resource_group.res_rg.*.name):$(ibm_resource_group.res_rg.*.id)"]
 }
 
