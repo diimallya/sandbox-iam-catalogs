@@ -7,7 +7,6 @@ variable admin_resource_groups{
 }
 
 variable user_access_groups{
-	type = "string"
 	default = "APPDEV-USERS"
 }
 
