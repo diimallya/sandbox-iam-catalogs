@@ -4,7 +4,7 @@ variable admin_access_groups{
 }
 
 variable user_access_groups{
-	default = "APPDEV-USERS-CUSTOM"
+	default = "APPDEV-USERS"
 	description = "The list of Access Group names of Users to which all the users mentioned in the field \"user_ids\" have to be added . Please provide Access Group names in a list separated with comma and no spaces in between."
 }
 
