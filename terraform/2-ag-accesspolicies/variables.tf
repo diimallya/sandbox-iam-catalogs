@@ -1,21 +1,21 @@
 variable admin_access_groups{
-	type = "list"
-	default = ["CLOUDMANAGEMENT-ADMINS", "DATA-ADMINS", "APPDEV-ENVIRONMENT-ADMINS", "APPDEV-ADMINS", "INTEGRATION-ADMINS", "BUSINESS-AUTOMATION-ADMINS" ]
+	type = "string"
+	default = "CLOUDMANAGEMENT-ADMINS,DATA-ADMINS,APPDEV-ENVIRONMENT-ADMINS,APPDEV-ADMINS,INTEGRATION-ADMINS,BUSINESS-AUTOMATION-ADMINS"
 }
 
 variable admin_resource_groups{
-	type = "list"
-	default = ["cloud-management", "business-data", "appdev-cloudnative", "appdev-cloudnative", "appdev-cloudnative", "business-automation"]
+	type = "string"
+	default = "cloud-management,business-data,appdev-cloudnative,appdev-cloudnative,appdev-cloudnative,business-automation"
 }
 
 variable user_access_groups{
-	type = "list"
-	default = ["APPDEV-USERS"]
+	type = "string"
+	default = "APPDEV-USERS"
 }
 
 variable user_resource_groups{
-	type = "list"
-	default = ["appdev-cloudnative"]
+	type = "string"
+	default = "appdev-cloudnative"
 }
 
 variable region {

@@ -1,5 +1,5 @@
 variable user_access_groups{
-	default = ["APPDEV-USERS"]
+	default = "INTEGRATION-ADMINS,DATA-ADMINS,APPDEV-ENVIRONMENT-ADMINS"
 }
 
 variable admin_ids{
