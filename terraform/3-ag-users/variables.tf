@@ -1,11 +1,10 @@
 variable admin_access_groups{
-	type = "list"
-	default = ["CLOUDMANAGEMENT-ADMINS", "DATA-ADMINS", "APPDEV-ENVIRONMENT-ADMINS", "APPDEV-ADMINS", "INTEGRATION-ADMINS", "BUSINESS-AUTOMATION-ADMINS" ]
-}
+	type = "string"
+	default = "CLOUDMANAGEMENT-ADMINS,DATA-ADMINS,APPDEV-ENVIRONMENT-ADMINS,APPDEV-ADMINS,INTEGRATION-ADMINS,BUSINESS-AUTOMATION-ADMINS"
 
 variable user_access_groups{
-	type = "list"
-	default = ["APPDEV-USERS"]
+	type = "string"
+	default = "APPDEV-USERS"
 }
 
 variable user_ids{
