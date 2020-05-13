@@ -3,12 +3,12 @@ variable admin_access_groups{
 }
 
 variable user_access_groups{
-	default = "APPDEV-USERS-CUSTOM"
+	default = "APPDEV-USERS"
 }
 
 variable user_ids{
-    type = "string"
+    default = ""
 }
 variable admin_ids{
-    type = "string"
+    default = ""
 }
