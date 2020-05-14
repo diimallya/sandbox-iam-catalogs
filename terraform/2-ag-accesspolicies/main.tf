@@ -5,6 +5,7 @@ locals{
   user_resource_groups = ["${split(",", var.user_resource_groups)}"]
 }
 
+
 /*** Create Access Groups for Admins and Users ***/
 
 resource "ibm_iam_access_group" "res_ag_admins" {
@@ -19,6 +20,7 @@ resource "ibm_iam_access_group" "res_ag_users" {
     name  = "${local.user_access_groups[count.index]}"
 }
 
+
 /*** Import resource groups for the Admins Access Groups ***/
 
 data "ibm_resource_group" "data_rg_admins" {
@@ -27,7 +29,9 @@ data "ibm_resource_group" "data_rg_admins" {
   name =  "${local.admin_resource_groups[count.index]}"
 }
 
+
 /*** Create Access Policies for Admins Access Group and Users Access Group ***/
+
 
 /*** Admins Access Groups Policies ***/
 
@@ -75,6 +79,7 @@ resource "ibm_iam_access_group_policy" "res_policy_admins_4" {
   }
 }
 
+
 /*** Import resource groups for the Users Access Groups ***/
 
 data "ibm_resource_group" "data_rg_users" {
@@ -90,7 +95,7 @@ resource "ibm_iam_access_group_policy" "res_policy_users_1" {
   count = "${length(local.user_access_groups)}"
 
   access_group_id = "${element(ibm_iam_access_group.res_ag_users.*.id, count.index)}"
-  roles           =  ["Operator", "Manager"]
+  roles           =  ["Viewer", "Manager"]
   resources  {
     resource_group_id = "${element(data.ibm_resource_group.data_rg_users.*.id, count.index)}"
   }
