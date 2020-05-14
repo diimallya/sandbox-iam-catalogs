@@ -1,8 +1,11 @@
 #1
-Tile for creation of resource groups for sandbox.
+ProductName = "1. Resource Groups"
+ShortDescription = "Tile for creation of resource groups for sandbox."
 
 #2
-Tile for creation of access groups and access policies for sandbox.
+ProductName = "2. Access Groups and Access Policies"
+ShortDescription = "Tile for creation of access groups and access policies for sandbox."
 
 #3
-Tile for assigning users to access groups of sandbox.
+ProductName = "3. Assign Users to Access Groups"
+ShortDescription = "Tile for assigning users to access groups of sandbox."
