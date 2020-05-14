@@ -1,7 +1,7 @@
 # Resource Group Creation
 The objective of the tile is to create the Resource Groups in IAM using the terraform script.
 
-Following are the resource gropus for default sandbox environment.
+Following are the default values of resource groups for sandbox environment.
 
 ```
     appdev-cloudnative
@@ -9,3 +9,8 @@ Following are the resource gropus for default sandbox environment.
     business-data
     business-automation
 ```
+However, users can provide resource group names as per their requriement. After opening the tile, expand the section **Set the deployment values** and provide value for `resourceGroups` parameter. The input value has to be a list of resource-group names separated with comma and no space in between. Any number of resource-group names can be provided in the list at once. 
+
+After setting the parameter, click on **Install** to create the resource-groups. The Schematics workspace gets created and executed to create the IAM resources. The logs for resource creation can be seen in Schematics workspace.
+
+**Note**: Resource group's name in the cloud account has to be unique. Hence, providing the names of resource-groups which are already present in the account, would lead to failure during Schematics workspace execution.
