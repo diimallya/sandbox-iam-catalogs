@@ -1,11 +1,14 @@
 #1
 ProductName = "1. Resource Groups"
+DocURL = "https://github.com/GandhiCloudLab/ibm-gsi-sandbox-tiles/blob/master/terraform/01-rg/readme.md"
 ShortDescription = "Tile for creation of resource groups for sandbox."
 
 #2
 ProductName = "2. Access Groups and Access Policies"
+DocURL = "https://github.com/GandhiCloudLab/ibm-gsi-sandbox-tiles/blob/master/terraform/02-ag-accesspolicies/readme.md"
 ShortDescription = "Tile for creation of access groups and access policies for sandbox."
 
 #3
 ProductName = "3. Assign Users to Access Groups"
+DocURL = "https://github.com/GandhiCloudLab/ibm-gsi-sandbox-tiles/blob/master/terraform/03-ag-users/readme.md"
 ShortDescription = "Tile for assigning users to access groups of sandbox."
