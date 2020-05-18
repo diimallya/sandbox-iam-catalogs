@@ -2,11 +2,11 @@
 The objective of the tile is to create the Access Groups and Access Policies in IAM using terraform scripts.
 
 
-## Access Groups
+## 1. Access Groups
 
-Following are the default values for access groups for sandbox environemnt.
+Following are the default values for access groups for GSI sandbox. However, users can provide access group names as per their requriement. 
 
-## Access Groups - Admins
+#### Access Groups - Admins
 ```
     CLOUDMANAGEMENT-ADMINS
     APPDEV-ADMINS
@@ -16,21 +16,34 @@ Following are the default values for access groups for sandbox environemnt.
     AUTOMATION-ADMINS
 ```
 
-## Access Groups - Users
+#### Access Groups - Users
 ```
     APPDEV-USERS
 ```
-However, users can provide access group names as per their requriement. After opening the tile, expand the section **Set the deployment values** and provide values for all the parameters. The input value for all the parameters except **region** has to be a list separated with comma and no space in between. Any number of items can be provided in the list at once. The input value for parameter **region** is a string.
 
-After setting the parameter, click on **Install** to create the access-groups and corresponding access group policies. The Schematics workspace gets created and executed to create the IAM resources. The logs for resource creation can be seen in Schematics workspace.
+### Parameters
+- Users can change the default values given in the parameter.
+- After opening the tile, expand the section **Set the deployment values** and provide value for all the parameters.
 
-**Note**: 
-* Access group list and correpsonding Resource group list should be in sync accordingly. If there are n number of access-group names, there should be n number resource-group names which correspond to those access-group names in the same order. This is important to have access-policies defined appropriately. 
-* The input value the parameter **region** has to be the exact name of the region as it appears in the IBM Cloud. This is important to have the defined policy work as expected. 
+#### Resource Groups
+- The list of resource groups given in the previous tile should be given here.
+- Here resource groups are not created, but they will be associated with Access groups.
+- The input value has to be a list separated with comma and no space in between. Any number of items can be provided in the list at once.
 
-## Access Policies
+#### Access Groups
+- The input value has to be a list separated with comma and no space in between. Any number of items can be provided in the list at once.
 
-Following are the access policies defined for all ADMIN groups 
+- Access group list and correpsonding Resource group list should be in sync accordingly. If there are n number of access-group names, there should be n number resource-group names which correspond to those access-group names in the same order.
+
+- The value has to be the exact name of the region as it appears in the IBM Cloud. 
+
+#### Region
+- The input value for parameter **region** is a string.
+- The value has to be the exact name of the region as it appears in the IBM Cloud. This is important to have the defined policy work as expected. 
+
+## 2. Access Policies
+
+Following are the access policies defined for all ADMIN groups. 
 
 ```
 -   Editor, Manager role on all IAM Services in all Regions in Resource Group - 31
@@ -48,3 +61,9 @@ Following are the access policies defined for all USERS groups
 -   Container Registry service - 21
 
 ```
+
+## 3. Install
+- After setting the parameter, click on **Install** to create the access-groups. 
+- The Schematics workspace gets created and executed to create the IAM resources. 
+- The logs for access-group creation can be seen in Schematics workspace.
+
