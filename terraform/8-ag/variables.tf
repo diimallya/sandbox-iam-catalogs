@@ -1,7 +1,7 @@
-variable user_access_groups{
-	default = "INTEGRATION-ADMINS,DATA-ADMINS,APPDEV-ENVIRONMENT-ADMINS"
+variable "user1" {
+ default = "dimallya@in.ibm.com"
 }
 
-variable admin_ids{
-    default = "dimallya@in.ibm.com,JeyaGandhi@in.ibm.com"
+variable "user2" {
+ default = "divya.mallya86@gmail.com"
 }

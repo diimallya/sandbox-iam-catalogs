@@ -1,3 +1,3 @@
-output "accessGroup1"{
-	value = [ "$(ibm_iam_access_group.res_ag)" ]
+output "user_invite_res_val"{
+	value = "${ibm_iam_user_invite.invite_user}"
 }

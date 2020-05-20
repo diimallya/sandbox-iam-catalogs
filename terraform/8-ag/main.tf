@@ -1,16 +1,34 @@
-locals{
-  user_access_groups = ["${split(",", var.user_access_groups)}"]
+resource "ibm_iam_access_group" "accgrp" {
+  name        = "Test"
+  description = "Test access group"
 }
 
-data "ibm_iam_access_group" "res_ag_users" {
-  count = "${length(local.user_access_groups)}"
-  access_group_name = "${local.user_access_groups[count.index]}"
+data "ibm_resource_group" "group" {
+  name = "Default"
 }
 
+resource "ibm_iam_access_group_policy" "policy" {
+  access_group_id = "${ibm_iam_access_group.accgrp.id}"
+  roles           = ["Operator", "Writer"]
 
-resource "ibm_iam_access_group_members" "res_groupmem_users" {
-  count = "${length(local.user_access_groups)}"
+  resources {
+    resource_group_id = "${data.ibm_resource_group.group.id}"
+  }
+}
 
-  access_group_id = "${element(data.ibm_iam_access_group.res_ag_users.*.groups.0.id, count.index)}"
-  ibm_ids         = ["${split(",", var.admin_ids)}"]
+resource "ibm_iam_user_invite" "invite_user" {
+  users = [
+    "${var.user1}",
+    "${var.user2}"
+  ]
+  access_groups = [
+    "${ibm_iam_access_group.accgrp.id}"
+  ]
+  iam_policy {
+    roles = ["Operator", "Writer", "Manager", "Viewer"]
+    resources {
+      service           = "containers-kubernetes"
+      resource_group_id = "${data.ibm_resource_group.group.id}"
+    }
+  }
 }
