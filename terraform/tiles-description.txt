@@ -9,6 +9,11 @@ DocURL = "https://github.com/GandhiCloudLab/ibm-gsi-sandbox-tiles/blob/master/te
 ShortDescription = "Tile for creation of access groups and access policies for sandbox."
 
 #3
-ProductName = "3. Assign Users to Access Groups"
-DocURL = "https://github.com/GandhiCloudLab/ibm-gsi-sandbox-tiles/blob/master/terraform/03-ag-users/readme.md"
+ProductName = "3. Add Users to IBM Cloud"
+DocURL = "https://github.com/GandhiCloudLab/ibm-gsi-sandbox-tiles/blob/master/terraform/03-invite-users/readme.md"
+ShortDescription = "Tile for inviting users to IBM Cloud Account."
+
+#4
+ProductName = "4. Assign Users to Access Groups"
+DocURL = "https://github.com/GandhiCloudLab/ibm-gsi-sandbox-tiles/blob/master/terraform/04-ag-users/readme.md"
 ShortDescription = "Tile for assigning users to access groups of sandbox."
