@@ -1,4 +1,4 @@
-# Assign users to Access Groups
+# Invite users to IBM Cloud Account
 
 The objective of the tile is to add users (email-ids) to the IBM Cloud account using terraform scripts.
 
@@ -14,7 +14,7 @@ User can enter email-ids of the users in bulk. They will be added to the IBM Clo
 #### Email-Ids
 - Provide email-ids to be added to the IBM Cloud account in `users` parameter.
  
-## 3. Install
+## 2. Install
 - After setting the parameter, click on **Install** to assign users to the access groups. 
 - The Schematics workspace gets created and executed to create the IAM resources. 
-- The logs for assign users can be seen in Schematics workspace.
+- The logs for assign users can be seen in Schematics workspace. 
